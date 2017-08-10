@@ -10,7 +10,9 @@ html, body {
 
 input, button {
   font-size: 16px;
+ 
 }
+
 
 input[type="text"],
 input[type="number"] {
@@ -23,30 +25,30 @@ input[type="number"] {
 
 input[type="text"]:invalid,
 input[type="number"]:invalid {
-  border-left-color: #c5162c;
+  border-left-color: purple;
   outline: 0;
   box-shadow: none;
 }
 
 input[type="text"]:focus,
 input[type="number"]:focus {
-  border-bottom-color: #FF5555;
+  border-bottom-color: purple;
 }
 
 button {
   border-radius: 0;
   padding: 4px 8px;
   border: 2px solid transparent;
-  background-color: #FF5555;
+  background-color: purple;
   color: white;
   outline: 0;
 }
 
 button:focus,
 button:hover {
-  border-color: #FF5555;
+  border-color: purple;
   background-color: transparent;
-  color: #FF5555;
+  color: purple;
 }
 
 button:active {
