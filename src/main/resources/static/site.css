@@ -19,8 +19,9 @@ input[type="number"] {
   border: 0;
   border-left: 4px solid transparent;
   border-bottom: 2px solid #ECECEC;
-  outline: 0;
-  padding: 4px 0;
+  outline: 0; 
+  padding: 4px;
+}
 }
 
 input[type="text"]:invalid,
@@ -55,5 +56,25 @@ button:active {
   border-color: #FF5555;
   background-color: #ff8982;
   color: black;
+}
+
+#link-akone  {
+	display: inline-block;
+	padding: 8px;
+	outline: 0;
+	color: navy;
+	transition-duration: 1s;
+	transition-property: transform;
+	transform: scale(1) rotate(0);
+    font-size: 20px;
+}
+
+
+#link-akone:hover {
+	background: navy;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 8px;
+	transform: scale(1.05) rotate(-1deg);
 }
 
