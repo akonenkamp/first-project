@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/site.css">
+  </head>
+  <body>
+    <h1>yes you can no you can't</h1>
+    <a href="/">back home</a>
+    <p>
+      <b>Message:</b>
+      {{ output }}
+    </p>
+    {{> helloworld/whisper-form }}
+    {{> helloworld/yeller-form }}
+    {{> helloworld/speech-form }}
+    
+  </body>
+</html>

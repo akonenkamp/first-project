@@ -47,5 +47,27 @@ public class HelloWorldController {
 		return mv;
 	}
 	 
+	@GetMapping("say-something")
+	public String makeAChoice(
+			String speechChoice,
+			String submittedMessage,
+			Model theThingIPutDataIntoForTheView 
+			) {
+		// if speech choice is yell
+		if (speechChoice.equals("yell")) {
+			Yeller aVariableThatHoldsAYeller = new Yeller(submittedMessage);
+			String loud = aVariableThatHoldsAYeller.yell();
+			theThingIPutDataIntoForTheView.addAttribute("output", loud);
+		} else { 
+			Whisperer someQuietThing = new Whisperer(submittedMessage);
+			String quiet = someQuietThing.soft();
+			theThingIPutDataIntoForTheView.addAttribute("output", quiet);
+			
+			
+		}
+		
+		return "helloworld/mixed-messages";
+		
+	}
 
 }
