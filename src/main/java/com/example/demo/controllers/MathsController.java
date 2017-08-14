@@ -15,7 +15,6 @@ import com.example.demo.models.Calculate;
 @RequestMapping("/maths")
 
 public class MathsController {
-
 	@GetMapping("")
 	public String adder() {
 		return "maths/index";
@@ -30,8 +29,7 @@ public class MathsController {
 		@RequestParam(required = false, name= "value") String value, 
 		Model model) {
 		Adder adder = new Adder(first, second);
-		double result = adder.calculate();
-		model.addAttribute("sum", result);
+		
 	
 	Double totalAfterMath = null; 
 	 if (mathbuts.equals("+")) {
@@ -64,7 +62,7 @@ public class MathsController {
     }
 	 
 ModelAndView mv = new ModelAndView("maths/sum-result"); 
-mv.addObject("result", result);
+mv.addObject("sum", totalAfterMath);
 return mv;
 	
 }
