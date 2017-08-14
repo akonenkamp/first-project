@@ -62,7 +62,7 @@ button:active {
 	display: inline-block;
 	padding: 8px;
 	outline: 0;
-	color: navy;
+	color: pink;
 	transition-duration: 1s;
 	transition-property: transform;
 	transform: scale(1) rotate(0);
@@ -71,10 +71,10 @@ button:active {
 
 
 #link-akone:hover {
-	background: navy;
+	background: pink;
 	text-decoration: none;
 	color: #fff;
 	border-radius: 8px;
-	transform: scale(1.05) rotate(-1deg);
+	transform: scale(1.05) rotate(-8deg);
 }
 
