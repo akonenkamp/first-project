@@ -1,5 +1,7 @@
 package com.example.demo.controllers;
 
+import static org.mockito.Mockito.RETURNS_DEEP_STUBS;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +24,7 @@ public class MathsController {
 	
 	
 	@PostMapping("")
-	public ModelAndView makeMathHappen (
+	public String makeMathHappen (
 		@RequestParam(name="left") int first, 
 		@RequestParam(name="right") double second,
 		@RequestParam(name="mathbuts", required = false) String mathbuts,
@@ -61,9 +63,11 @@ public class MathsController {
 	
     }
 	 
-ModelAndView mv = new ModelAndView("maths/sum-result"); 
-mv.addObject("sum", totalAfterMath);
-return mv;
+//ModelAndView mv = new ModelAndView("maths/sum-result"); 
+//mv.addObject("sum", totalAfterMath);
+	 model.addAttribute("sum", totalAfterMath);
+	 return ("maths/sum-result");
+//return mv;
 	
 }
 	
